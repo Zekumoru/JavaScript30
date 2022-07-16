@@ -9,7 +9,7 @@ document.querySelectorAll('div.key').forEach((key) => {
 
     key.addEventListener('transitionend', () => {
         key.classList.remove('playing');
-    })
+    });
 });
 
 window.onkeydown = (e) => {
