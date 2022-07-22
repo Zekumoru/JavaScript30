@@ -94,6 +94,15 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    console.group('Sum instances of data');
+    const sum = data.reduce((sum, item) => {
+        if (!(item in sum)) sum[item] = 0;
+        sum[item]++;
+        return sum;
+    }, {});
+    console.log(sum);
+    console.groupEnd('Sum instances of data');
+
   </script>
 </body>
 </html>
